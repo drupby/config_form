@@ -1,0 +1,15 @@
+config_form.admin:
+  path: '/admin/config/config_form'
+  defaults:
+    _content: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Config form example admin'
+  requirements:
+    _permission: 'administer site configuration'
+
+config_form.settings:
+  path: '/admin/config/config_form/form'
+  defaults:
+    _title: 'Config form'
+    _form: 'Drupal\config_form\Form\ConfigForm'
+  requirements:
+    _permission: 'administer site configuration'

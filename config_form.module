@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Main module functions.
+ */
+
+ /**
+ * Implements hook_menu_link_defaults().
+ */
+function config_form_menu_link_defaults() {
+  $items = array();
+
+  // Config form admin section.
+  $items['config_form.admin.config_form'] = array(
+    'link_title' => 'Config Form menu title',
+    'description' => 'Administration tools.',
+    'route_name' => 'config_form.admin',
+    'parent' => 'system.admin.config',
+    'menu_name' => 'admin',
+    'weight' => -99,
+  );
+
+  // Form.
+  $items['config_form.admin.config_form.form'] = array(
+    'link_title' => 'Config form',
+    'description' => 'example config form',
+    'route_name' => 'config_form.settings',
+    'parent' => 'config_form.admin.config_form',
+  );
+
+  return $items;
+}

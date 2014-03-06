@@ -1,0 +1,5 @@
+name: 'Config form'
+type: module
+description: 'Example of the configuration form.'
+core: 8.x
+configure: config_form.settings
